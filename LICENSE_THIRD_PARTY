@@ -1,0 +1,19 @@
+MGtree uses third-party software, headers, and libraries which may be distributed under different
+licenses. We have attempted to list all of these third party libraries and
+their licenses below.
+
+BioPython License (see NOTE 1)
+  * BioPython: https://github.com/biopython/biopython
+
+BSD License (http://www.opensource.org/licenses/BSD-3-Clause)
+  * Markdown: https://Python-Markdown.github.io/
+
+MIT License (https://opensource.org/license/mit)
+  * bowtie2: https://github.com/BenLangmead/bowtie2
+  * NGmerge: https://github.com/jsh58/NGmerge
+  * fonttools: http://github.com/fonttools/fonttools
+  * markdown-it-py: https://github.com/executablebooks/markdown-it-py
+
+NOTE 1
+The BioPython license is described here: https://github.com/biopython/biopython/blob/master/LICENSE.rst
+Some BioPython components are dually covered by a BSD 3-Clause License described herein.
