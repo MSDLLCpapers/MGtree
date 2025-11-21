@@ -1,0 +1,51 @@
+{
+    "parseSAM.py": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_parsed.tsv:md5,3694c292356cb9f6d0e592bbefe206b8"
+                    ]
+                ],
+                "1": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_parsed.sam:md5,3225e765a3e86cc38d7bee221a7deab4"
+                    ]
+                ],
+                "2": [
+                    "versions.yml:md5,9f82751ec36879d1c40c9cca871603ea"
+                ],
+                "parsed": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_parsed.tsv:md5,3694c292356cb9f6d0e592bbefe206b8"
+                    ]
+                ],
+                "sam": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_parsed.sam:md5,3225e765a3e86cc38d7bee221a7deab4"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,9f82751ec36879d1c40c9cca871603ea"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.6"
+        },
+        "timestamp": "2025-09-22T15:02:32.112584812"
+    }
+}

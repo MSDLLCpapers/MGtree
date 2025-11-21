@@ -2,17 +2,44 @@ MGtree uses third-party software, headers, and libraries which may be distribute
 licenses. We have attempted to list all of these third party libraries and
 their licenses below.
 
+Apache Software License, Version 2.0 (http://opensource.org/licenses/apache2.0)
+  * nextflow: https://nextflow.io
+  * regex: https://github.com/mrabarnett/mrab-regex
+  * packaging: https://github.com/pypa/packaging
+  * docker: https://www.docker.com/ 
+  * singularity: https://github.com/sylabs/singularity
+
 BioPython License (see NOTE 1)
   * BioPython: https://github.com/biopython/biopython
 
 BSD License (http://www.opensource.org/licenses/BSD-3-Clause)
+  * numpy: https://numpy.org
+  * pandas: https://pandas.pydata.org/
+  * scipy: https://scipy.org/
   * Markdown: https://Python-Markdown.github.io/
+
+GNU General Public License version 3.0 (https://opensource.org/license/GPL-3.0)
+  * FastQC: https://github.com/s-andrews/FastQC
+  * MultiQC: https://multiqc.info/
 
 MIT License (https://opensource.org/license/mit)
   * bowtie2: https://github.com/BenLangmead/bowtie2
+  * bamtools: https://github.com/pezmaster31/bamtools
+  * nf-core, components: https://nf-co.re
+  * pysam: https://github.com/pysam-developers/pysam
+  * samtools: https://github.com/samtools/samtools
+  * fastp: https://github.com/OpenGene/fastp
   * NGmerge: https://github.com/jsh58/NGmerge
+  * coloredlogs: https://coloredlogs.readthedocs.io
   * fonttools: http://github.com/fonttools/fonttools
   * markdown-it-py: https://github.com/executablebooks/markdown-it-py
+
+Mozilla Public License (http://www.opensource.org/licenses/MPL-2.0)
+  * certifi: https://github.com/certifi/python-certifi
+
+Python Software Foundation License (https://docs.python.org/3/license.html)
+  * isal: https://github.com/pycompression/python-isal
+  * typing_extensions: https://github.com/python/typing_extensions
 
 NOTE 1
 The BioPython license is described here: https://github.com/biopython/biopython/blob/master/LICENSE.rst

@@ -1,0 +1,132 @@
+{
+    "MGtree.py - no g flag": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_genotype.tsv:md5,7e069917ed744018575fd1a514e0fe13"
+                    ]
+                ],
+                "1": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_tally.tsv:md5,fc894c42fab889a473e7df699b163c65"
+                    ]
+                ],
+                "2": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        ""
+                    ]
+                ],
+                "3": [
+                    "versions.yml:md5,5de1bde3a8190efe8ef4ae0d8796d55c"
+                ],
+                "console": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        ""
+                    ]
+                ],
+                "genotype": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_genotype.tsv:md5,7e069917ed744018575fd1a514e0fe13"
+                    ]
+                ],
+                "tally": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_tally.tsv:md5,fc894c42fab889a473e7df699b163c65"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,5de1bde3a8190efe8ef4ae0d8796d55c"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.6"
+        },
+        "timestamp": "2025-09-22T14:53:16.027348144"
+    },
+    "MGtree.py - g flag": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_genotype.tsv:md5,8ea036235b339a5836dfc5c901e97108"
+                    ]
+                ],
+                "1": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_tally.tsv:md5,fc894c42fab889a473e7df699b163c65"
+                    ]
+                ],
+                "2": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        ""
+                    ]
+                ],
+                "3": [
+                    "versions.yml:md5,5de1bde3a8190efe8ef4ae0d8796d55c"
+                ],
+                "console": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        ""
+                    ]
+                ],
+                "genotype": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_genotype.tsv:md5,8ea036235b339a5836dfc5c901e97108"
+                    ]
+                ],
+                "tally": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test_tally.tsv:md5,fc894c42fab889a473e7df699b163c65"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,5de1bde3a8190efe8ef4ae0d8796d55c"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.6"
+        },
+        "timestamp": "2025-09-22T14:52:44.275632418"
+    }
+}
