@@ -23,9 +23,7 @@ This pipeline performs metagenomics classification of reads against a set of ref
 
 The pipeline produces a list of the reference genotypes and relative abundances that are found in a given sample.  Note that the pipeline, and this manual, always refer to the output classifications as `genotypes`, but the output could be at any of a number of levels (e.g. serotype, species, strain, etc.), depending on the reference sequences that are being queried against.
 
-This pipeline can be run from the main branch, which contaims the core scripts and can be used to process a single sample with the alinger of your choice, and a nextflow branch, which allows for batch processing of samples from QC and alignment with `bowtie2`, through classification. 
-* For the main branch, use `git checkout main`
-* For the nextflow branch, use `git checkout nextflow`
+The `main` branch of the pipeline, described in this README, contains the core scripts and can be used to process a single sample with the aligner of your choice.  The `nextflow` branch enables batch processing of samples, including QC, alignment with `bowtie2`, and classification; to use this branch, run `git checkout nextflow`.
 
 ![MGtree-](https://github.com/user-attachments/assets/d22b715d-cd51-456e-b732-1aded4d9e1c0)
 **MGtree workflow**
@@ -84,9 +82,7 @@ Optional arguments:
 <a name="index"></a>
 #### Reference indexing
 
-In order to align reads to a set of references, the reference sequences must be indexed.  This pipeline uses the short read aligner `bowtie2`, whose indexes are created by [`bowtie2-build`](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer). 
-```
-<br>
+In order to align reads to a set of references, the reference sequences must be indexed.  This pipeline uses the short read aligner `bowtie2`, whose indexes are created by [`bowtie2-build`](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer).
 
 
 <a name="sample"></a>
@@ -275,6 +271,8 @@ This script systematically tests the pipeline scripts using test files located i
 * `MGtree.py`
 
 For each command, the output files are checked against expected results.  For MGtree.py, all three output files are checked.  The script prints the diffs of the output files, and a summary of the test results.
+
+To invoke the tests, simply run `bash test.sh`.
 
 <a name="misc"></a>
 ## Miscellaneous
