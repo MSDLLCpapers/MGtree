@@ -77,7 +77,6 @@ Optional arguments:
   -n <file>      Input csv file to genotype nodes
 ```
 * This file should list, on each line, a node name and the genotype to be assigned to it, comma-separated.  Genotypes are not allowed to contain the following characters: `;(),:_`
-<br>
 
 <a name="index"></a>
 #### Reference indexing
