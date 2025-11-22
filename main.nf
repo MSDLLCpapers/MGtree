@@ -13,13 +13,14 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 */
 
-include { MGTREE                    } from './workflows/mgtree'
-include { PIPELINE_INITIALISATION   } from './subworkflows/local/utils_nfcore_mgtree_pipeline'
-include { PIPELINE_COMPLETION       } from './subworkflows/local/utils_nfcore_mgtree_pipeline'
+include { MGTREE as MGTREE_IMPL          } from './workflows/mgtree'
+include { PIPELINE_INITIALISATION        } from './subworkflows/local/utils_nfcore_mgtree_pipeline'
+include { PIPELINE_COMPLETION            } from './subworkflows/local/utils_nfcore_mgtree_pipeline'
 include {
     getGenomeAttribute ;
     getControlGenomeAttribute
 } from './subworkflows/local/utils_nfcore_mgtree_pipeline'
+
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RUN MAIN WORKFLOW
@@ -45,7 +46,7 @@ workflow {
     //
     // WORKFLOW: Run main workflow
     //
-    MGTREE(
+    MGTREE_IMPL(
         PIPELINE_INITIALISATION.out.samplesheet,
         params.fasta ?: getGenomeAttribute(params, 'fasta'),
         params.bowtie2 ?: getGenomeAttribute(params, 'bowtie2'),
@@ -59,6 +60,7 @@ workflow {
         params.multiqc_logo,
         params.multiqc_methods_description,
     )
+
     //
     // SUBWORKFLOW: Run completion tasks
     //
@@ -70,9 +72,10 @@ workflow {
         params.outdir,
         params.monochrome_logs,
         params.hook_url,
-        MGTREE.out.multiqc_report,
+        MGTREE_IMPL.out.multiqc_report,
     )
 }
+
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     NAMED WORKFLOWS FOR PIPELINE
@@ -102,7 +105,7 @@ workflow MGTREE {
     //
     // WORKFLOW: Run pipeline
     //
-    MGTREE(
+    MGTREE_IMPL(
         samplesheet,
         val_fasta,
         val_bowtie2,
@@ -118,5 +121,5 @@ workflow MGTREE {
     )
 
     emit:
-    multiqc_report = MGTREE.out.multiqc_report // channel: /path/to/multiqc_report.html
+    multiqc_report = MGTREE_IMPL.out.multiqc_report // channel: /path/to/multiqc_report.html
 }

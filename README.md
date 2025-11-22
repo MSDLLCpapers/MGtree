@@ -30,9 +30,9 @@ This pipeline performs metagenomics classification of short reads against a set 
 
 The pipeline produces a list of the reference genotypes and relative abundances that are found in a given sample.  Note that the pipeline, and this manual, always refer to the output classifications as `genotypes`, but the output could be at any of a number of levels (e.g. serotype, species, strain, etc.), depending on the reference sequences that are being queried against.
 
-This pipeline can be run from the main branch, which contaims the core scripts and can be used to process a single sample with the alinger of your choice, and a nextflow branch, which allows for batch processing of samples from QC and alignment with `bowtie2`, through classification. 
-* For the main branch, use `git checkout MGtree_main`
-* For the nextflow branch, use `git checkout MGtree_nextflow`
+This pipeline can be run from the main branch, which contains the core scripts and can be used to process a single sample with the aligner of your choice, and a nextflow branch, which allows for batch processing of samples from QC and alignment with `bowtie2`, through classification. 
+* For the main branch, use `git checkout main`
+* For the nextflow branch, use `git checkout nextflow`
 
 ![MGtree-](https://github.com/user-attachments/assets/d22b715d-cd51-456e-b732-1aded4d9e1c0)
 **MGtree workflow.**
@@ -125,12 +125,11 @@ Optional arguments:
   -n <file>      Input csv file to genotype nodes
 ```
 * This file should list, on each line, a node name and the genotype to be assigned to it, comma-separated.  Genotypes are not allowed to contain the following characters: `;(),:_`
-<br>
 
 <a name="index"></a>
 #### Reference indexing
 
-In order to align reads to a set of references, the reference sequences must be indexed.  This pipeline uses the short read aligner `bowtie2`, whose indexes are created by [`bowtie2-build`](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer).  
+In order to align reads to a set of references, the reference sequences must be indexed.  This pipeline uses the short read aligner `bowtie2`, whose indexes are created by [`bowtie2-build`](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#the-bowtie2-build-indexer).
 <br>
 
 
@@ -572,6 +571,9 @@ They are loaded in sequence, so later profiles can overwrite earlier profiles.
 
 If `-profile` is not specified, the pipeline will run locally and expect all software to be installed and available on the `PATH`. This is _not_ recommended, since it can lead to different results on different machines dependent on the computer enviroment.
 
+- `test`
+  - A profile with a complete configuration for automated testing
+  - Includes links to test data so needs no other parameters
 - `docker`
   - A generic configuration profile to be used with [Docker](https://docker.com/)
 - `singularity`
