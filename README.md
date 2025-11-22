@@ -25,8 +25,11 @@ The pipeline produces a list of the reference genotypes and relative abundances 
 
 The `main` branch of the pipeline, described in this README, contains the core scripts and can be used to process a single sample with the aligner of your choice.  The `nextflow` branch enables batch processing of samples, including QC, alignment with `bowtie2`, and classification; to use this branch, run `git checkout nextflow`.
 
-![MGtree-](https://github.com/user-attachments/assets/d22b715d-cd51-456e-b732-1aded4d9e1c0)
-**MGtree workflow**
+<figure>
+  <img src="MGtree.png" alt="MGtree workflow" width="700">
+  <figcaption><strong>MGtree workflow</strong></figcaption>
+</figure>
+<br><br>
 
 The pipeline suggests utilizing two open-source programs:
 * [`MEGA-X`](https://www.megasoftware.net/): creates a phylogenetic tree
