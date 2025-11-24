@@ -1,3 +1,5 @@
+# MGtree: metagenomics analysis using a novel approach via short read alignments and a phylogenetic tree
+
 ## Table of Contents
 * [Introduction](#intro)
 * [Reference sequences](#reference)
@@ -32,7 +34,7 @@ The `main` branch of the pipeline, described in this README, contains the core s
 <br><br>
 
 The pipeline suggests utilizing two open-source programs:
-* [`MEGA-X`](https://www.megasoftware.net/): creates a phylogenetic tree
+* [`MEGA-X`](https://www.megasoftware.net/) v10.0.4: creates a phylogenetic tree
 * [`bowtie2`](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml) v2.3.5.1: aligns the short reads to a set of reference sequences
 
 The rest of the pipeline, `MGtree.py` and the other scripts, are written in python with minimal dependencies.  They should work with either python2 or python3, but [everyone should be using python3 now](https://pythonclock.org/).  The scripts are described below.
